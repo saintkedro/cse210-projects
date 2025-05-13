@@ -20,19 +20,21 @@ class Program
         job2._endYear = 2024;
 
         // Call method to display job details
-        job1.DisplayJobDetails();
-        job2.DisplayJobDetails();
+        //job1.DisplayJobDetails();
+        //job2.DisplayJobDetails();
 
         // Create new instance of the Resume class
-        Resume resume = new Resume();
-        resume._name = "Kingsley Isong"; // Add a name to the resume
+        Resume myResume = new Resume();
+        myResume._name = "Kingsley Isong"; // Add a name to the resume
 
         // add jobs to the resume
-        resume._jobs.Add(job1);
-        resume._jobs.Add(job2);
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
 
         // Verify access and display the first job title using dot notation
-        Console.WriteLine($"First Job Title: {resume._jobs[0]._jobTitle}");
+        // Console.WriteLine($"First Job Title: {resume._jobs[0]._jobTitle}");
+
+        myResume.DisplayJobDetails();
 
     }
 }
