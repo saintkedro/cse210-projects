@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 
 class Program
 {
@@ -28,16 +29,23 @@ class Program
 
             if (userChoice == "1")
             {
+                Console.WriteLine("Enter a title for your entry: ");
+                string title = Console.ReadLine();
+                
                 string prompt = promptGenerator.GetRandomPrompt(); // gets a random prompt
                 Console.WriteLine($"{prompt}: ");
                 Console.Write("> ");
                 string response = Console.ReadLine();
 
+                Console.WriteLine("What lesson did you learn today?");
+                string lesson = Console.ReadLine();
                 Entry newEntry = new Entry
                 {
                     _date = DateTime.Now.ToShortDateString(),
                     _promptText = prompt,
-                    _entryText = response
+                    _entryText = response,
+                    _title = title,
+                    _lessonLearned = lesson,
                 };
 
                 journal.AddEntry(newEntry);
