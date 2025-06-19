@@ -13,14 +13,14 @@ abstract class Activity
     public void DisplayStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Starting {_name} Activity");
+        Console.WriteLine($"\nWelcome to the {_name} Activity.");
         Console.WriteLine(_description);
-        Console.WriteLine($"Duration: {_duration} seconds");
+        //Console.WriteLine($"Duration: {_duration} seconds");
         ShowSpinner(3);
     }
     public void DisplayEndingMessage()
     {
-        Console.WriteLine($"\nGood job! You have completed the {_name} Activity.");
+        Console.WriteLine($"\nWell done! \nYou have completed {_duration} seconds of the {_name} Activity.");
         ShowSpinner(3);
     }
 

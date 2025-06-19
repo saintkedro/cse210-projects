@@ -18,7 +18,7 @@ class ReflectingActivity : Activity
     public ReflectingActivity()
     {
         _name = "Reflecting";
-        _description = "This activity helps you reflect on meaningful life moments.";
+        _description = "This activity helps you reflect on times in your life when you have shown stregnth and resilience. This will help you recognize the power you have and how you can use it in other aspects .";
     }
 
     public override void Run()

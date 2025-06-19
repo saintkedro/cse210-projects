@@ -9,7 +9,7 @@ class Program
          while (true)
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the Mindfulness Program");
+            Console.WriteLine("\nWelcome to the Mindfulness Program");
             Console.WriteLine("1. Start Breathing Activity");
             Console.WriteLine("2. Start Listing Activity");
             Console.WriteLine("3. Start Reflecting Activity");
@@ -37,9 +37,10 @@ class Program
                     Thread.Sleep(2000);
                     continue;
             }
-            Console.WriteLine("Welcome to the Breathing Activity");
-            Console.WriteLine("This activity will help you relax by walking you through breathing in AddingNewEventArgs out slowly.Clear your mind and focus on your breathing.");
-            Console.Write("How long, in seconds wounld you like for your session?: ");
+
+            activity.DisplayStartingMessage();
+            Console.Write("\nHow long, in seconds, would you like for your session? ");
+            
             if (int.TryParse(Console.ReadLine(), out int duration))
             {
                 activity.SetDuration(duration);
